@@ -4,7 +4,7 @@ import logger from 'redux-logger';
 
 import {
   persistStore,
-  persistReducer,
+  // persistReducer,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -13,7 +13,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-import storage from 'redux-persist/lib/storage';
+// import storage from 'redux-persist/lib/storage';
 
 import phonebookReducer from './phoneBookReducer';
 
@@ -27,19 +27,20 @@ const middleware = [
   logger,
 ];
 
-const phonebookPersistConfig = {
-  key: 'contacts',
-  storage,
-  blacklist: ['filter'],
-};
+// const phonebookPersistConfig = {
+//   key: 'contacts',
+//   storage,
+//   blacklist: ['filter'],
+// };
 
 const store = configureStore({
   reducer: {
-    contacts: persistReducer(phonebookPersistConfig, phonebookReducer),
+    contacts: phonebookReducer,
+    //  persistReducer(phonebookPersistConfig, phonebookReducer),
   },
   middleware,
 });
 
-const persistor = persistStore(store);
+// const persistor = persistStore(store);
 
-export default { persistor, store };
+export default { store }; //persistor,
