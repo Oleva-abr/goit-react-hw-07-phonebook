@@ -15,7 +15,7 @@ const addContactError = createAction('@phonebook/addContactError'); //error
 const deleteContactRequest = createAction('@phonebook/deleteContactRequest'); //start
 const deleteContactSuccess = createAction('@phonebook/deleteContactSuccess'); //success
 const deleteContactError = createAction('@phonebook/deleteContactError'); //error
-
+//ChangeFilter
 const changeFilter = createAction('@phonebook/changeFilter');
 
 export default {
