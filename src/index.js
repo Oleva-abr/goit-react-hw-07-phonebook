@@ -8,7 +8,9 @@ import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store.store}>
+    <Provider store={store}>
+      {' '}
+      //store.store
       {/* <PersistGate loading={null} persistor={store.persistor}> */}
       <App />
       {/* </PersistGate> */}

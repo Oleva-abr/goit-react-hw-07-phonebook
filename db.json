@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": "id-1",
+      "name": "Dan Abramov",
+      "number": "666-66-66"
+    },
+    {
+      "id": "id-2",
+      "name": "Robin Good",
+      "number": "443-89-12"
+    },
+    {
+      "id": "id-3",
+      "name": "Harry Potter",
+      "number": "645-17-79"
+    },
+    {
+      "id": "id-4",
+      "name": "Darth Vader",
+      "number": "227-91-26"
+    }
+  ]
+}
