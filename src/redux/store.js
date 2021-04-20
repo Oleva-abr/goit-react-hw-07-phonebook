@@ -44,5 +44,3 @@ const store = configureStore({
 // const persistor = persistStore(store);
 
 export default { store }; //persistor,
-
-//http://localhost:4141/contacts
