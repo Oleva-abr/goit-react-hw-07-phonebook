@@ -2,7 +2,7 @@ import style from './contactList.module.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import selector from '../../redux/phoneBookSelectors';
-import contactsOperations from '../../redux/phoneBookOperations';
+import operations from '../../redux/phoneBookOperations';
 
 const ContactList = ({ contacts, onDeleteContact }) => (
   <ul className={style.contactList}>
@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onDeleteContact: id => dispatch(contactsOperations.deleteContact(id)),
+  onDeleteContact: id => dispatch(operations.deleteContact(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList);
