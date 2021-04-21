@@ -11,18 +11,15 @@ const fetchContacts = () => dispatch => {
 
   axios
     .get('/contacts')
-    //        const contacts = Object.keys(response.data).map(key => ({
-    //    id: key,
-    //    ...response.data[key],
-    //  }));
+
     .then(({ data }) => dispatch(actions.fetchContactsSuccess(data)))
     .catch(error => dispatch(actions.fetchContactsError(error)));
 };
 //AddContact
-const addContact = ({ name, number }) => dispatch => {
+const addContact = contact => dispatch => {
   dispatch(actions.addContactRequest());
   axios
-    .post('/contacts')
+    .post('/contacts', contact)
     .then(({ data }) => dispatch(actions.addContactSuccess(data)))
     .catch(error => dispatch(actions.addContactError(error)));
 };

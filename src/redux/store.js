@@ -3,8 +3,6 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 
 import {
-  persistStore,
-  // persistReducer,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -18,18 +16,12 @@ import phonebookReducer from './phoneBookReducer';
 const middleware = [
   ...getDefaultMiddleware({
     serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER], //fix persist
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
     },
   }),
 
   logger,
 ];
-
-// const phonebookPersistConfig = {
-//   key: 'contacts',
-//   storage,
-//   blacklist: ['filter'],
-// };
 
 const store = configureStore({
   reducer: {

@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api-server": "json-server --port 4141 --delay 300 --watch db.json",
+    "server": "json-server --port 4141 --delay 300 --watch db.json",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p"
   },

@@ -1,7 +1,8 @@
 import style from './filter.module.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import actions from '../../redux/phoneBookAction';
+
+import contactsOperations from '../../redux/phoneBookOperations';
 
 const Filter = ({ value, onChange }) => (
   <label className={style.filter}>
@@ -24,7 +25,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onChange: event => dispatch(actions.changeFilter(event.target.value)),
+  onChange: event =>
+    dispatch(contactsOperations.changeFilter(event.target.value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

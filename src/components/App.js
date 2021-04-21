@@ -25,8 +25,6 @@ class App extends Component {
 }
 const mapStateToProps = state => ({
   isLoadingContacts: state.contacts.loading,
-
-  // isLoadingContacts: contactsSelectors.getLoading(state), // selectors
 });
 const mapDispatchToProps = dispatch => ({
   fetchContacts: () => dispatch(contactsOperations.fetchContacts()),

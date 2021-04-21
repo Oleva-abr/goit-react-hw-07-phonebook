@@ -18,6 +18,8 @@ const deleteContactError = createAction('@phonebook/deleteContactError'); //erro
 //ChangeFilter
 const changeFilter = createAction('@phonebook/changeFilter');
 
+const clearError = createAction('@phonebook/clearError');
+
 export default {
   //GET
   fetchContactsRequest,
@@ -33,4 +35,6 @@ export default {
   deleteContactError,
   //ChangeFilter
   changeFilter,
+  //error
+  clearError,
 };
