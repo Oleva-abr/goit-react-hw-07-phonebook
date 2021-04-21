@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './contactForm.module.css';
 import { connect } from 'react-redux';
+import selector from '../../redux/phoneBookSelectors';
 
 import contactsOperations from '../../redux/phoneBookOperations';
 
@@ -71,7 +72,7 @@ class ContactForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  contacts: state.contacts.items,
+  contacts: selector.getAllContacts(state),
 });
 
 const mapDispatchToProps = dispatch => ({
